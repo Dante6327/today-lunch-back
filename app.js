@@ -14,7 +14,7 @@ app.use(cors());
 app.use(morgan('combined'));
 app.use(express.json());
 app.use(routes);
-console.log('123');
+
 app.get('/ping', (req, res) => {
   res.json({ message: 'pong' });
 });
