@@ -10,6 +10,22 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `food_images`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `food_images` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `images` varchar(1000) DEFAULT NULL,
+  `food_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `food_id` (`food_id`),
+  CONSTRAINT `food_images_ibfk_1` FOREIGN KEY (`food_id`) REFERENCES `foods` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `foods`
 --
 
@@ -19,8 +35,17 @@ CREATE TABLE `foods` (
   `id` int NOT NULL AUTO_INCREMENT,
   `food_category` varchar(100) DEFAULT NULL,
   `food_name` varchar(100) DEFAULT NULL,
-  `image` varchar(1000) DEFAULT NULL,
-  `calorie` decimal(10,0) DEFAULT NULL COMMENT 'kcal',
+  `fodd_cd` varchar(20) DEFAULT NULL,
+  `serving_size` int DEFAULT NULL,
+  `calorie` decimal(10,0) DEFAULT NULL,
+  `carbohydrate` decimal(10,0) DEFAULT NULL,
+  `protein` decimal(10,0) DEFAULT NULL,
+  `fat` decimal(10,0) DEFAULT NULL,
+  `sugars` decimal(10,0) DEFAULT NULL,
+  `sodium` decimal(10,0) DEFAULT NULL,
+  `cholesterol` decimal(10,0) DEFAULT NULL,
+  `fatty_acid` decimal(10,0) DEFAULT NULL,
+  `trans_fat` decimal(10,0) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -69,6 +94,7 @@ CREATE TABLE `users` (
   `age` int DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -96,5 +122,6 @@ LOCK TABLES `schema_migrations` WRITE;
 INSERT INTO `schema_migrations` (version) VALUES
   ('20230712045211'),
   ('20230712045225'),
-  ('20230712045319');
+  ('20230712045319'),
+  ('20230724223300');
 UNLOCK TABLES;

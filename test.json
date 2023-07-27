@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "food": "순대국밥",
+  "imgs": ["food1", "food2", "food3", "food4"],
+  "nutrients": [
+    { "nutrient": "나트륨", "value": 1137.58 },
+    { "nutrient": "탄수화물", "value": 93.46 },
+    { "nutrient": "당류", "value": 1.51 },
+    { "nutrient": "지방", "value": 20.56 },
+    { "nutrient": "트랜스지방", "value": 0.08 },
+    { "nutrient": "포화지방", "value": 11.33 },
+    { "nutrient": "단백질", "value": 28.56 }
+  ]
+}
