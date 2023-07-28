@@ -1,11 +1,13 @@
 const foodService = require('../services/foodService');
 
-const foodList = async (req, res) => {
+const foodData = async (req, res) => {
   try {
-    const data = await foodService.searchList();
-    console.log(data);
+    const foodData = await foodService.searchFood();
+    console.log('controller', foodData);
+
     return res.status(201).json({
-      message: 'SIGNUP_SUCCESS',
+      message: 'Random food search complete!',
+      data: foodData,
     });
   } catch (err) {
     console.log(err);
@@ -14,5 +16,5 @@ const foodList = async (req, res) => {
 };
 
 module.exports = {
-  foodList,
+  foodData,
 };

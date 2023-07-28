@@ -19,12 +19,14 @@ myDataSource
     myDataSource.destroy();
   });
 
-const searchFoodList = async () => {
+const searchFoodInfo = async () => {
   try {
-    return await myDataSource.query(
-      `SELECT * FROM foods
+    const result = await myDataSource.query(
+      `SELECT * FROM foods ORDER BY RAND() LIMIT 1;
 		`
     );
+
+    return result;
   } catch (err) {
     const error = new Error('INVALID_DATA_INPUT');
     error.statusCode = 500;
@@ -33,5 +35,5 @@ const searchFoodList = async () => {
 };
 
 module.exports = {
-  searchFoodList,
+  searchFoodInfo,
 };

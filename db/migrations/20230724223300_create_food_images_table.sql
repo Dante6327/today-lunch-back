@@ -1,7 +1,7 @@
 -- migrate:up
 CREATE TABLE food_images (
 	id INT NOT NULL AUTO_INCREMENT,
-	images VARCHAR(1000),
+	image VARCHAR(1000),
     food_id INT,
 	PRIMARY KEY (id),
 	FOREIGN KEY (food_id) REFERENCES foods (id)

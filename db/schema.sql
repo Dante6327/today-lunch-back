@@ -17,7 +17,7 @@
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `food_images` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `images` varchar(1000) DEFAULT NULL,
+  `image` varchar(1000) DEFAULT NULL,
   `food_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `food_id` (`food_id`),
@@ -33,19 +33,7 @@ CREATE TABLE `food_images` (
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `foods` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `food_category` varchar(100) DEFAULT NULL,
   `food_name` varchar(100) DEFAULT NULL,
-  `fodd_cd` varchar(20) DEFAULT NULL,
-  `serving_size` int DEFAULT NULL,
-  `calorie` decimal(10,0) DEFAULT NULL,
-  `carbohydrate` decimal(10,0) DEFAULT NULL,
-  `protein` decimal(10,0) DEFAULT NULL,
-  `fat` decimal(10,0) DEFAULT NULL,
-  `sugars` decimal(10,0) DEFAULT NULL,
-  `sodium` decimal(10,0) DEFAULT NULL,
-  `cholesterol` decimal(10,0) DEFAULT NULL,
-  `fatty_acid` decimal(10,0) DEFAULT NULL,
-  `trans_fat` decimal(10,0) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -92,7 +80,9 @@ CREATE TABLE `users` (
   `access_token` varchar(255) NOT NULL,
   `name` varchar(20) DEFAULT NULL,
   `age` int DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
+  `is_diet` tinyint(1) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
