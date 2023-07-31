@@ -17,7 +17,7 @@
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `food_images` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `image` varchar(1000) DEFAULT NULL,
+  `images` json DEFAULT NULL,
   `food_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `food_id` (`food_id`),
@@ -34,6 +34,7 @@ CREATE TABLE `food_images` (
 CREATE TABLE `foods` (
   `id` int NOT NULL AUTO_INCREMENT,
   `food_name` varchar(100) DEFAULT NULL,
+  `contents` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

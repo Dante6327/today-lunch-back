@@ -22,7 +22,7 @@ myDataSource
 const searchFoodInfo = async () => {
   try {
     const result = await myDataSource.query(
-      `SELECT * FROM foods ORDER BY RAND() LIMIT 1;
+      `SELECT * FROM foods LEFT JOIN food_images ON foods.id=food_images.food_id ORDER BY RAND() LIMIT 1;
 		`
     );
 
