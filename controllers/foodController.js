@@ -3,7 +3,7 @@ const foodService = require('../services/foodService');
 const foodData = async (req, res) => {
   try {
     const foodData = await foodService.searchFood();
-    console.log('fd', foodData);
+
     return res.status(201).json({
       message: 'Random food search complete!',
       data: foodData,
