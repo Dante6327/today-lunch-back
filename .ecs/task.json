@@ -1,0 +1,45 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:448648424519:task-definition/today-lunch-back:2",
+  "containerDefinitions": [
+    {
+      "name": "today-lunch-back",
+      "image": "448648424519.dkr.ecr.ap-northeast-2.amazonaws.com/today-lunch-back",
+      "cpu": 0,
+      "memory": 8000,
+      "memoryReservation": 2000,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 0,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "mountPoints": [],
+      "volumesFrom": []
+    }
+  ],
+  "family": "today-lunch-back",
+  "executionRoleArn": "arn:aws:iam::448648424519:role/ecsTaskExecutionRole",
+  "revision": 2,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": ["EXTERNAL", "EC2"],
+  "requiresCompatibilities": ["EC2"],
+  "registeredAt": "2023-08-07T14:20:27.632Z",
+  "registeredBy": "arn:aws:iam::448648424519:root",
+  "tags": []
+}
