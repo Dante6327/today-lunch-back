@@ -2,14 +2,14 @@
   "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:448648424519:task-definition/today-lunch-ecs-task:1",
   "containerDefinitions": [
     {
-      "name": "today-lunch-ecr-repo",
+      "name": "today-lunch-ecs-task",
       "image": "448648424519.dkr.ecr.ap-northeast-2.amazonaws.com/today-lunch-ecr-repo",
       "cpu": 0,
       "memory": 8000,
       "memoryReservation": 2000,
       "portMappings": [
         {
-          "containerPort": 8080,
+          "containerPort": 80,
           "hostPort": 0,
           "protocol": "tcp"
         }
@@ -20,9 +20,9 @@
       "volumesFrom": []
     }
   ],
-  "family": "today-lunch-ecr-repo",
+  "family": "today-lunch-ecs-task",
   "executionRoleArn": "arn:aws:iam::448648424519:role/ecsTaskExecutionRole",
-  "revision": 2,
+  "revision": 1,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -39,7 +39,7 @@
   "placementConstraints": [],
   "compatibilities": ["EXTERNAL", "EC2"],
   "requiresCompatibilities": ["EC2"],
-  "registeredAt": "2023-08-07T14:20:27.632Z",
+  "registeredAt": "2023-08-15T13:15:57.203Z",
   "registeredBy": "arn:aws:iam::448648424519:root",
   "tags": []
 }
