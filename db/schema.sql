@@ -33,6 +33,10 @@ CREATE TABLE `food_images` (
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `foods` (
   `id` int NOT NULL AUTO_INCREMENT,
+  `at_the_time` json default `lunch`,
+  `age_group` json default '20',
+  `spicy_level` varchar(10),
+  `is_diet` varchar(10),
   `food_name` varchar(100) DEFAULT NULL,
   `contents` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)

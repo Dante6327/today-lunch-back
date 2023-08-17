@@ -1,9 +1,9 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:448648424519:task-definition/today-lunch-back:2",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:448648424519:task-definition/today-lunch-ecs-task:1",
   "containerDefinitions": [
     {
-      "name": "today-lunch-back",
-      "image": "448648424519.dkr.ecr.ap-northeast-2.amazonaws.com/today-lunch-back",
+      "name": "today-lunch-ecr-repo",
+      "image": "448648424519.dkr.ecr.ap-northeast-2.amazonaws.com/today-lunch-ecr-repo",
       "cpu": 0,
       "memory": 8000,
       "memoryReservation": 2000,
@@ -20,7 +20,7 @@
       "volumesFrom": []
     }
   ],
-  "family": "today-lunch-back",
+  "family": "today-lunch-ecr-repo",
   "executionRoleArn": "arn:aws:iam::448648424519:role/ecsTaskExecutionRole",
   "revision": 2,
   "volumes": [],
