@@ -5,8 +5,8 @@
       "name": "today-lunch-ecs-task",
       "image": "448648424519.dkr.ecr.ap-northeast-2.amazonaws.com/today-lunch-ecr-repo",
       "cpu": 0,
-      "memory": 970,
-      "memoryReservation": 970,
+      "memory": 800,
+      "memoryReservation": 200,
       "portMappings": [
         {
           "containerPort": 80,
