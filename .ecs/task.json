@@ -1,12 +1,11 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:448648424519:task-definition/today-lunch-ecs-task:1",
   "containerDefinitions": [
     {
-      "name": "today-lunch-ecs-task",
+      "name": "today-lunch-task01",
       "image": "448648424519.dkr.ecr.ap-northeast-2.amazonaws.com/today-lunch-ecr-repo",
       "cpu": 0,
-      "memory": 800,
-      "memoryReservation": 200,
+      "memory": 512,
+      "memoryReservation": 512,
       "portMappings": [
         {
           "containerPort": 8080,
@@ -15,31 +14,58 @@
         }
       ],
       "essential": true,
-      "environment": [],
+      "environment": [
+        {
+          "name": "DB_USERNAME",
+          "value": "root"
+        },
+        {
+          "name": "PORT",
+          "value": "8080"
+        },
+        {
+          "name": "DB_PORT",
+          "value": "3306"
+        },
+        {
+          "name": "DB_LOGGING",
+          "value": "TRUE"
+        },
+        {
+          "name": "DB_CONNECTION",
+          "value": "mysql"
+        },
+        {
+          "name": "DB_HOST",
+          "value": "today-lunch-back.csk2lq284i8i.ap-northeast-2.rds.amazonaws.com"
+        },
+        {
+          "name": "DB_DATABASE",
+          "value": "today_lunch"
+        },
+        {
+          "name": "NUTRIENTS_API_URL",
+          "value": "https://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1"
+        },
+        {
+          "name": "NUTRIENTS_API_KEY",
+          "value": "5Jihq4QVQBI9vZC4dCcLeBfrVGZ020UBcXlhR/Eg2SXlM2AM75I8XoanHEc9lPaQnKoky6rmL3Ap/k5PE47ioQ=="
+        },
+        {
+          "name": "DB_PASSWORD",
+          "value": "jinp1993"
+        }
+      ],
       "mountPoints": [],
       "volumesFrom": []
     }
   ],
-  "family": "today-lunch-ecs-task",
+  "family": "today-lunch-task01",
   "executionRoleArn": "arn:aws:iam::448648424519:role/ecsTaskExecutionRole",
   "revision": 1,
   "volumes": [],
   "status": "ACTIVE",
-  "requiresAttributes": [
-    {
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-    },
-    {
-      "name": "ecs.capability.execution-role-ecr-pull"
-    }
-  ],
   "placementConstraints": [],
-  "compatibilities": ["EXTERNAL", "EC2"],
   "requiresCompatibilities": ["EC2"],
-  "registeredAt": "2023-08-15T13:15:57.203Z",
-  "registeredBy": "arn:aws:iam::448648424519:root",
   "tags": []
 }
