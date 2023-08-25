@@ -1,7 +1,7 @@
 {
   "containerDefinitions": [
     {
-      "name": "today-lunch-task01",
+      "name": "today-lunch-task02",
       "image": "448648424519.dkr.ecr.ap-northeast-2.amazonaws.com/today-lunch-ecr-repo",
       "cpu": 0,
       "memory": 512,
@@ -19,7 +19,7 @@
       "volumesFrom": []
     }
   ],
-  "family": "today-lunch-task01",
+  "family": "today-lunch-task02",
   "executionRoleArn": "arn:aws:iam::448648424519:role/ecsTaskExecutionRole",
   "revision": 1,
   "volumes": [],
