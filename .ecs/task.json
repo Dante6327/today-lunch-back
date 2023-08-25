@@ -14,48 +14,7 @@
         }
       ],
       "essential": true,
-      "environment": [
-        {
-          "name": "DB_USERNAME",
-          "value": "root"
-        },
-        {
-          "name": "PORT",
-          "value": "8080"
-        },
-        {
-          "name": "DB_PORT",
-          "value": "3306"
-        },
-        {
-          "name": "DB_LOGGING",
-          "value": "TRUE"
-        },
-        {
-          "name": "DB_CONNECTION",
-          "value": "mysql"
-        },
-        {
-          "name": "DB_HOST",
-          "value": "today-lunch-back.csk2lq284i8i.ap-northeast-2.rds.amazonaws.com"
-        },
-        {
-          "name": "DB_DATABASE",
-          "value": "today_lunch"
-        },
-        {
-          "name": "NUTRIENTS_API_URL",
-          "value": "https://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1"
-        },
-        {
-          "name": "NUTRIENTS_API_KEY",
-          "value": "5Jihq4QVQBI9vZC4dCcLeBfrVGZ020UBcXlhR/Eg2SXlM2AM75I8XoanHEc9lPaQnKoky6rmL3Ap/k5PE47ioQ=="
-        },
-        {
-          "name": "DB_PASSWORD",
-          "value": "jinp1993"
-        }
-      ],
+      "environment": [],
       "mountPoints": [],
       "volumesFrom": []
     }
