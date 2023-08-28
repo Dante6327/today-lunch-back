@@ -50,6 +50,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: ecs-service2
+          service: ecs-service3
           cluster: today-lunch-cluster02
           wait-for-service-stability: true
